@@ -25,15 +25,13 @@ RUN apt-get update && apt-get install -y \
 
 RUN docker-php-ext-install opcache
 
-#RUN apt-get install -y libicu-dev
-# Debina Jessie play nice :)
-RUN apt-get install -y zlib1g-dev libicu-dev g++
-RUN pecl install intl
+RUN apt-get install -y libicu-dev
+RUN docker-php-ext-configure intl
 RUN docker-php-ext-install -j$(nproc) intl
 
 # Install Composer and make it available in the PATH
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
 RUN curl -LsS https://symfony.com/installer -o /usr/bin/symfony && chmod a+x /usr/bin/symfony
 
-# Set the WORKDIR to /var/app so all following commands run in /var/app
-WORKDIR /var/app
+# Set the WORKDIR to /var/www so all following commands run in /var/www
+WORKDIR /var/www
