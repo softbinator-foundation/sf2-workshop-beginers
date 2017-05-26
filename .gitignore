@@ -1,0 +1,17 @@
+.idea
+.DS_Store
+.php_cs.cache
+/app/bootstrap.php.cache
+/app/cache/*
+!app/cache/.gitkeep
+/app/config/parameters.yml
+/app/logs/*
+!app/logs/.gitkeep
+/app/phpunit.xml
+/build/
+/vendor/
+/bin/
+/composer.phar
+/web/bundles/
+/web/media/*
+!web/media/.gitkeep
