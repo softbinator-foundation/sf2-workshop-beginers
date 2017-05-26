@@ -25,7 +25,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN docker-php-ext-install opcache
 
-RUN apt-get install -y libicu-dev
+#RUN apt-get install -y libicu-dev
+# Debina Jessie play nice :)
+RUN apt-get install -y zlib1g-dev libicu-dev g++
 RUN pecl install intl
 RUN docker-php-ext-install -j$(nproc) intl
 
