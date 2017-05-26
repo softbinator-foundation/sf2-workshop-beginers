@@ -20,8 +20,6 @@ services:
           - DB_USER=root
           - DB_PASS=q1w2e3r4
           - DB_NAME=app
-          - MAILER_HOST=mailer
-          - MAILER_PORT=1025
         image: softbinator/sf2:0.2
         #build:
         #    context: .
