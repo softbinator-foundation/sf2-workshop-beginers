@@ -1,4 +1,2 @@
-admin-one
+sf2-workshop-beginers
 =========
-
-A Symfony project created on April 27, 2017, 7:02 am.
